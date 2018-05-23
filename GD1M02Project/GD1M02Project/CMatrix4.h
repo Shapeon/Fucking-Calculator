@@ -20,7 +20,7 @@ public:
 	static CMatrix4& Add(const CMatrix4& _rA, const CMatrix4& _rB, CMatrix4& _rResult);
 	static CMatrix4& Subtract(const CMatrix4& _rA, const CMatrix4& _rB, CMatrix4& _rResult);
 	static CMatrix4& Multiply(float _fScalar, const CMatrix4& _rA, CMatrix4& _rResult);
-	//static CMatrix4& Multiply(const CMatrix4& _rA, const CMatrix4& _rB, CMatrix4& _rResult);
+	static CMatrix4& Multiply(const CMatrix4& _rA, const CMatrix4& _rB, CMatrix4& _rResult);
 	//static CMatrix4& Transpose(const CMatrix4& _rA, CMatrix4& _rResult);
 	//static float Determinant(const CMatrix4& _rA);
 	//static bool Inverse(const CMatrix4& _rA, CMatrix4& _rResult);

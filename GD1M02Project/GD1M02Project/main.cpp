@@ -505,6 +505,70 @@ BOOL CALLBACK MatrixDlgProc(HWND _hwnd,
 		}
 		break;
 
+		case IDOK2:
+		{
+			//Perform multiplication A * B
+			Matrix_A->Multiply(*Matrix_A, *Matrix_B, *Matrix_R);
+
+			//Write result to Resultant Matrix
+			//First Row
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R11, Matrix_R->GetElement(0, 0));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R12, Matrix_R->GetElement(0, 1));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R13, Matrix_R->GetElement(0, 2));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R14, Matrix_R->GetElement(0, 3));
+
+			//Second Row			   			   
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R21, Matrix_R->GetElement(1, 0));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R22, Matrix_R->GetElement(1, 1));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R23, Matrix_R->GetElement(1, 2));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R24, Matrix_R->GetElement(1, 3));
+
+			//Third Row				   			   
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R31, Matrix_R->GetElement(2, 0));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R32, Matrix_R->GetElement(2, 1));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R33, Matrix_R->GetElement(2, 2));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R34, Matrix_R->GetElement(2, 3));
+
+			//Fourth Row			   			   
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R41, Matrix_R->GetElement(3, 0));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R42, Matrix_R->GetElement(3, 1));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R43, Matrix_R->GetElement(3, 2));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R44, Matrix_R->GetElement(3, 3));
+		}
+		break;
+
+		case IDOK5:
+		{
+			//Perform multiplication B * A
+			Matrix_B->Multiply(*Matrix_B, *Matrix_A, *Matrix_R);
+
+			//Write result to Resultant Matrix
+			//First Row
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R11, Matrix_R->GetElement(0, 0));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R12, Matrix_R->GetElement(0, 1));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R13, Matrix_R->GetElement(0, 2));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R14, Matrix_R->GetElement(0, 3));
+
+			//Second Row			   			   
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R21, Matrix_R->GetElement(1, 0));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R22, Matrix_R->GetElement(1, 1));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R23, Matrix_R->GetElement(1, 2));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R24, Matrix_R->GetElement(1, 3));
+
+			//Third Row				   			   
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R31, Matrix_R->GetElement(2, 0));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R32, Matrix_R->GetElement(2, 1));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R33, Matrix_R->GetElement(2, 2));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R34, Matrix_R->GetElement(2, 3));
+
+			//Fourth Row			   			   
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R41, Matrix_R->GetElement(3, 0));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R42, Matrix_R->GetElement(3, 1));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R43, Matrix_R->GetElement(3, 2));
+			WriteToEditBox(g_hDlgMatrix, IDC_EDIT_R44, Matrix_R->GetElement(3, 3));
+		}
+		break;
+
 
 		default:
 			break;
